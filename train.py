@@ -1,26 +1,33 @@
 import numpy as np
+from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
-from sklearn import datasets
-import matplotlib.pyplot as plt
-import pandas as pd
-from LogisticRegression import LogisticRegression
+import matplotlib.pyplot as plt 
+from matplotlib.colors import ListedColormap
+from KNN import KNN
 
-bc =datasets.load_breast_cancer()
-# df=pd.DataFrame(data=bc.data, columns=bc.feature_names)
-# df['target']=bc.target 
-# print(df.head)
-# print(df.info)
-X,y=bc.data,bc.target
-X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=123) 
+cmap = ListedColormap(['#FF0000', '#00FF00', '#0000FF']) 
 
-clf=LogisticRegression(lr=0.01)
-clf.fit(X_train,y_train)
-y_pred=clf.predict(X_test)  
 
-def accuracy(y_pred,y_test):
-    return np.sum(y_pred==y_test)/len(y_test)
+iris=load_iris()
 
-acc=accuracy(y_pred,y_test)
+X, y = iris.data, iris.target 
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
+
+# plt.figure()
+# plt.scatter(X[:,2],X[:,3],c=y, cmap=cmap,edgecolor='k',s=20)
+# plt.show()
+
+clf = KNN(k = 5)
+clf.fit(X_train, y_train)
+predictions = clf.predict(X_test)
+
+print(predictions)
+
+def accuracy (y_test,y_pred):
+        return np.sum(y_pred == y_test)/len(y_pred) 
+    
+acc = accuracy(y_test,predictions)
 
 print(acc)
- 
+

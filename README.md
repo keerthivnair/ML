@@ -6,4 +6,4 @@
  
  ## 📂 Projects
 
-- [🌸 Iris Classifier Web App (KNN from Scratch)](https://iris-web-app-atij.onrender.com/)
+- [Iris Classifier Web App (KNN from Scratch)](https://iris-web-app-atij.onrender.com/)

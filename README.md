@@ -7,3 +7,4 @@
  ## 📂 Projects
 
 - [Iris Classifier Web App (KNN from Scratch)](https://iris-web-app-atij.onrender.com/)
+- [Spam-message-detection-App(Naive-Bayes(99% accuracy))](https://email-spam-detection-naivebayes.onrender.com/)

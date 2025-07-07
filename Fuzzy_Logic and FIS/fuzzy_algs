@@ -1,0 +1,15 @@
+See fuzzy algorithms and the fuzzy rules are used to undo precision and give more generalistic approach
+to learning and predictions and defintions mostly like humans.
+
+For example :)
+
+1. If a banker has to give a loan, he determines the risk factor based on the credit of the asker. But the definition of a good credit varies and is not the same for everyone.
+
+So we mix values and take percentages using graph interfernce to draw out what percentages of people think a particular amount in x axis belongs to a good, bad or medium risk credit then for a particular credit no instead of one value there are 3 values one for each session - bad,medium or good.
+
+Then we can defuzzify it by finding the centroid of the output graph.
+
+The output graph also will be calculated fuzzily. based on rules for one output three
+fuzzy or percentage outputs ie if rish is this percentage then opnions of diff people are atken on whther it can be classified as high medium or no risk n based on that we get an intersection graph for pur risk percentage based on credit so we take the centroid of the intersection point.
+
+See it it not always possible based on the actual data by ourselves so we initially assign random values and train the computer to finally arrive to the actula values by learning algorithms , backprop etc.
